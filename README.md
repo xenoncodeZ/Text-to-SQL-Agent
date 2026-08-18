@@ -84,21 +84,13 @@ python -m uvicorn api:app --reload
 
 1. Open frontend/index.html directly in your web browser.
 2. Input your **Gemini API Key** securely into the designated field.
-3. Upload the generated sales_data.db file (or any custom SQLite database).
-4. Ask an analytical question in plain English, such as:
+3. Run setup_sqlite.py to generate a sales_data.db for testing purposes or refer 4. 
+4. Upload the generated sales_data.db file (or any custom SQLite database).
+5. Ask an analytical question in plain English, such as:
    * "Show me all transactions sorted by amount."
    * "What is the total amount spent by Emma Watson?"
    * "List the top 3 most expensive products."
-5. Click **Run Query** and watch the AI dynamically generate your data table!
+6. Click **Run Query** and watch the AI dynamically generate your data table!
 
 ---
-
-## 🗺️ Future Roadmap
-
-- [ ] Transition frontend to React/Next.js for state management.
-- [ ] Add data visualization capabilities (Chart.js/D3) directly in the UI.
-- [ ] Deploy backend to a containerized cloud environment (Render/Railway).
-
----
-
 *Note: The API key is used strictly client-side for the current session and is never permanently stored on the server.*
