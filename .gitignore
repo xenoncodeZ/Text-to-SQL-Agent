@@ -1,0 +1,10 @@
+# Environments
+myenv/
+.venv/
+__pycache__/
+
+# Secrets
+.env
+
+# Databases
+*.db

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text-to-SQL Agent</title>
+    <!-- Linking our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text-to-SQL AI Agent</h1>
+        <p>Upload your SQLite database, enter your Gemini API key, and ask questions in plain English.</p>
+
+        <!-- The Main Form -->
+        <form id="agent-form">
+            
+            <!-- 1. API Key Input -->
+            <div class="form-group">
+                <label for="apiKey">Gemini API Key:</label>
+                <input type="password" id="apiKey" placeholder="Enter your Gemini API key" required>
+            </div>
+
+            <!-- 2. Database File Upload Input -->
+            <div class="form-group">
+                <label for="dbFile">Database File (.db, .sqlite):</label>
+                <input type="file" id="dbFile" accept=".db,.sqlite" required>
+            </div>
+
+            <!-- 3. Question Input -->
+            <div class="form-group">
+                <label for="question">Your Question:</label>
+                <input type="text" id="question" placeholder="e.g. What were the total sales by customer?" required>
+            </div>
+
+            <!-- 4. Submit Button -->
+            <button type="submit" id="submit-btn">Run Query</button>
+        </form>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="hidden">Running query and analyzing database...</div>
+
+        <!-- 5. Results Area -->
+        <div id="results-container">
+            <!-- Results table or error message will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Linking our JavaScript logic -->
+    <script src="app.js"></script>
+</body>
+</html>
